@@ -23,11 +23,11 @@ export default function Navbar() {
 
   if (!pathname.startsWith("/dashboard")) {
     return (
-      <nav className="w-full border-b bg-white dark:bg-gray-900 sticky top-0 z-50">
+      <nav className="w-full border-b bg-white dark:bg-gray-900 fixed top-0 z-50">
         <div className="mx-auto flex max-w-7xl items-center justify-between p-4">
           {/* Logo */}
           <Link href="/" className="text-xl font-bold">
-            EasyHouse
+            <span className="text-orange-500">Easy</span><span className="text-teal-400">House</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -67,11 +67,11 @@ export default function Navbar() {
                 Logout
               </Button>
             ) : (
-              <div>
+              <div className="space-x-2 hidden md:block">
                 <Button variant="outline" asChild>
                   <Link href="/login">Login</Link>
                 </Button>
-                <Button asChild>
+                <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white">
                   <Link href="/register">Sign Up</Link>
                 </Button>
               </div>
@@ -90,12 +90,33 @@ export default function Navbar() {
                   <DropdownMenuItem asChild>
                     <Link href="/about">About</Link>
                   </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/contact">Contact</Link>
+                  </DropdownMenuItem>
 
                   {session && (
                     <DropdownMenuItem asChild>
                       <Link href="/dashboard">Dashboard</Link>
                     </DropdownMenuItem>
                   )}
+                  <DropdownMenuItem asChild>
+                    {session ? (
+                      <Button
+                        onClick={() => signOut({ callbackUrl: "/" })} // ✅ logout handler
+                      >
+                        Logout
+                      </Button>
+                    ) : (
+                      <div className="space-x-2 md:hidden">
+                        <Button variant="outline" asChild>
+                          <Link href="/login">Login</Link>
+                        </Button>
+                        <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white">
+                          <Link href="/register">Sign Up</Link>
+                        </Button>
+                      </div>
+                    )}
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>

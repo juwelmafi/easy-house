@@ -58,7 +58,7 @@ export default function BannerCarousel() {
   };
 
   return (
-    <div className="w-full h-[550px] relative">
+    <div className="w-full h-[550px] mt-16 relative">
       <Slider {...settings} className="h-full">
         {houses.map((house) => (
           <div key={house.id} className="relative h-[550px]">
@@ -72,26 +72,26 @@ export default function BannerCarousel() {
             />
 
             {/* Card Overlay */}
-            <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[350px]">
+            <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[200px] md:w-[350px]">
               <Card className="rounded-2xl shadow-xl">
-                <CardContent className="p-6 space-y-4">
-                  <Badge className="bg-emerald-500 text-white">
+                <CardContent className="p-6 space-y-1 md:space-y-4">
+                  <Badge className="bg-orange-500 text-white">
                     {house.discount}
                   </Badge>
-                  <h2 className="text-xl font-bold">{house.title}</h2>
+                  <h2 className="md:text-xl font-bold">{house.title}</h2>
                   <p className="text-sm text-gray-600">{house.address}</p>
-                  <p className="text-2xl font-semibold text-emerald-600">
+                  <p className="text-2xl font-semibold text-teal-400">
                     {house.price}
                   </p>
-                  <div className="flex justify-between text-gray-700 text-sm pt-3">
+                  <div className="hidden md:flex  justify-between text-gray-700 text-sm pt-3">
                     <div className="flex items-center gap-1">
-                      <FaBed /> {house.beds} Br
+                      <FaBed className="text-teal-400"/> {house.beds} Br
                     </div>
                     <div className="flex items-center gap-1">
-                      <FaBath /> {house.baths} Ba
+                      <FaBath className="text-teal-400"/> {house.baths} Ba
                     </div>
                     <div className="flex items-center gap-1">
-                      <MdSquareFoot /> {house.sqft} SqFt
+                      <MdSquareFoot className="text-teal-400"/> {house.sqft} SqFt
                     </div>
                   </div>
                 </CardContent>
