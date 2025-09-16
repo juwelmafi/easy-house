@@ -7,13 +7,13 @@ export function Footer() {
   const pathname = usePathname();
   if(!pathname.startsWith("/dashboard")){
     return (
-    <footer className="bg-emerald-600 text-white mt-10">
+    <footer className="bg-teal-400 text-white">
       <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Column 1: Brand */}
         <div>
-          <h2 className="text-2xl font-bold">MyBrand</h2>
+          <h2 className="text-2xl font-bold">EasyHouse</h2>
           <p className="mt-2 text-sm text-emerald-100">
-            Building modern web applications with love 💚
+            Building modern web applications with love
           </p>
         </div>
 
@@ -29,11 +29,6 @@ export function Footer() {
             <li>
               <Link href="/about" className="hover:text-emerald-200">
                 About
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" className="hover:text-emerald-200">
-                Services
               </Link>
             </li>
             <li>
@@ -54,9 +49,9 @@ export function Footer() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="px-3 py-2 rounded-md text-black w-full"
+              className="px-3 py-2 rounded-md text-white w-full"
             />
-            <Button type="submit" variant="secondary">
+            <Button type="submit" variant="secondary" className="bg-orange-500 text-white">
               Subscribe
             </Button>
           </form>
@@ -64,8 +59,8 @@ export function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-emerald-500 text-center py-4 text-sm text-emerald-100">
-        © {new Date().getFullYear()} MyBrand. All rights reserved.
+      <div className="border-t border-white text-center py-4 text-sm text-emerald-100">
+        © {new Date().getFullYear()} EasyHouse. All rights reserved.
       </div>
     </footer>
   )

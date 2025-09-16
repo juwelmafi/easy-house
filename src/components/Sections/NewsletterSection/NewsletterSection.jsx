@@ -13,7 +13,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-r from-blue-500 to-indigo-700 text-white">
+    <section className="py-16 bg-gradient-to-r from-teal-400 to-orange-500 text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -31,13 +31,13 @@ const NewsletterSection = () => {
             />
             <button
               type="submit"
-              className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold transition-colors duration-300 whitespace-nowrap"
+              className="bg-teal-400 hover:bg-teal-500 px-8 py-4 rounded-lg font-semibold transition-colors duration-300 whitespace-nowrap"
             >
               Subscribe
             </button>
           </form>
           
-          <p className="text-sm text-blue-200 mt-6">
+          <p className="text-sm text-white mt-6">
             By subscribing, you agree to our Terms of Service and Privacy Policy.
           </p>
         </div>

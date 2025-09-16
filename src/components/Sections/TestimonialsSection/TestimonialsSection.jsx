@@ -13,21 +13,21 @@ const TestimonialsSection = () => {
       name: 'Lydia Wise',
       location: 'Manchester',
       content: 'Working with @homeID is like having a family member who can fix everything. They know what you need, exactly when you need it.',
-      avatar: '/images/avatar1.jpg' // Replace with your actual image path
+      avatar: 'https://i.ibb.co.com/HfX1GrTP/user1.jpg' // Replace with your actual image path
     },
     {
       id: 2,
       name: 'Olive Erickson',
       location: 'New Mexico',
       content: 'Working with @homeID is like having a family member who can fix everything. They know what you need, exactly when you need it.',
-      avatar: '/images/avatar2.jpg' // Replace with your actual image path
+      avatar: 'https://i.ibb.co.com/TM0X73SX/user2.jpg' // Replace with your actual image path
     },
     {
       id: 3,
       name: 'Carl Knight',
       location: 'Washington, D.C.',
       content: 'Working with @homeID is like having a family member who can fix everything. They know what you need, exactly when you need it.',
-      avatar: '/images/avatar3.jpg' // Replace with your actual image path
+      avatar: 'https://i.ibb.co.com/V0G8M7Hp/user3.jpg' // Replace with your actual image path
     }
   ];
 
@@ -35,11 +35,13 @@ const TestimonialsSection = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 bg-blue-50 text-teal-400 rounded-full text-sm font-medium mb-4">
             TESTIMONIALS
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What Our Clients Say About Us</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">What Our Clients Say About Us</h2>
+          <div className="mt-2 h-1 w-16 bg-teal-400 mx-auto"></div>
         </div>
+
 
         <div className="max-w-4xl mx-auto">
           <Swiper
@@ -59,7 +61,7 @@ const TestimonialsSection = () => {
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
                 <div className="bg-white rounded-xl p-8 shadow-md text-center mx-auto max-w-2xl">
-                  <div className="text-blue-500 text-4xl mb-2">"</div>
+                  <div className="text-teal-400 text-4xl mb-2">"</div>
                   <p className="text-gray-600 text-lg mb-6 px-4">
                     {testimonial.content}
                   </p>
@@ -95,7 +97,7 @@ const TestimonialsSection = () => {
           opacity: 1;
         }
         .testimonial-pagination .swiper-pagination-bullet-active {
-          background-color: #3B82F6;
+          background-color: #00D5BE;
           width: 24px;
           border-radius: 8px;
         }
