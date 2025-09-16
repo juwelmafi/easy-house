@@ -1,28 +1,21 @@
 import PropertyCarousel from "./PropertyCarousel";
-import axios from "axios";
-
-// Simulate server data fetching
-async function getProperties() {
-  // Replace this with fetch from your DB or API
-  return
-}
-
-async function fetchHouses() {
-  try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const response = await axios.get(`${baseUrl}/api/houses`);
-    const data = response.data; // the JSON returned by your API
-    return data;
-  } catch (error) {
-    console.error("Error fetching houses:", error);
-    return [];
-  }
-}
+import { dbConnect } from "@/lib/dbConnect";
 
 export default async function LatestProperties() {
-  // const properties = await getProperties();
-  const properties = await fetchHouses();
-  console.log(properties);
+  // ✅ Fetch directly from DB
+  const houseCollection = await dbConnect("houses");
+  const houses = await houseCollection
+    .find({})
+    .sort({ createdAt: -1 })
+    .limit(10)
+    .toArray();
+
+  // ✅ Serialize MongoDB data
+  const serialized = houses.map((h) => ({
+    ...h,
+    _id: h._id.toString(),
+    createdAt: h.createdAt ? h.createdAt.toString() : null,
+  }));
 
   return (
     <section className="py-16 bg-white">
@@ -36,7 +29,7 @@ export default async function LatestProperties() {
         </div>
 
         {/* Client Component Carousel */}
-        <PropertyCarousel properties={properties} />
+        <PropertyCarousel properties={serialized} />
       </div>
     </section>
   );
