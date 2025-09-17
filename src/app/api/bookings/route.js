@@ -55,7 +55,7 @@ export async function POST(req) {
       house: {
         title: house.title,
         price: house.price,
-        location: house.location,
+        location: house.address,
       },
       bookedAt: new Date(),
     };

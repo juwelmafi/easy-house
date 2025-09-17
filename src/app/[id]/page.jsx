@@ -21,7 +21,7 @@ export default async function HouseDetailPage({ params }) {
   }
 
   return (
-    <section className="max-w-5xl mx-auto py-12 px-4">
+    <section className="max-w-5xl mx-auto mt-20 py-12 px-4">
       <div className="grid md:grid-cols-2 gap-8">
         <img
           src={house.image}
@@ -30,15 +30,19 @@ export default async function HouseDetailPage({ params }) {
         />
         <div>
           <h1 className="text-3xl font-bold mb-4">{house.title}</h1>
-          <p className="text-xl text-teal-600 mb-4">${house.price}</p>
-          <p className="text-gray-700">{house.address}</p>
-          <p className="text-gray-700">{house.beds}</p>
-          <p className="text-gray-700">{house.baths}</p>
-          <p className="text-gray-700">{house.area}</p>
+          <div className="bg-orange-50 border border-orange-500 p-10 rounded-2xl">
+            <p className="text-xl text-teal-400 mb-4 font-bold">${house.price}</p>
+          <p className="text-gray-700"><span className="font-bold">House Address </span>: {house.address}</p>
+          <p className="text-gray-700"><span className="font-bold">Total beds in the house:</span> {house.beds}</p>
+          <p className="text-gray-700"> <span className="font-bold">Total bathrooms:</span> {house.baths}</p>
+          <p className="text-gray-700"><span className="font-bold">Total area:</span> {house.area}</p>
+          <BookHouseButton houseId={house._id} />
+          </div>
+          
         </div>
       </div>
       {/* Book House Button */}
-          <BookHouseButton houseId={house._id} />
+          
     </section>
   );
 }

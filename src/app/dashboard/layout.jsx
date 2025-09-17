@@ -17,7 +17,7 @@ const DashboardLayout = ({ children }) => {
       >
         <div className="p-6">
           <Link href="/">
-            <h1 className="text-2xl font-bold text-emerald-500">EasyHouse</h1>
+            <h1 className="text-2xl font-bold text-orange-500">Easy<span className="text-teal-400">House</span></h1>
           </Link>
         </div>
         <nav className="mt-6">

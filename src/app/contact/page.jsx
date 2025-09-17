@@ -5,9 +5,9 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
+    <div className="min-h-screen pt-28 bg-gray-50 flex flex-col items-center justify-center p-6">
       <div className="max-w-3xl w-full bg-white shadow-lg rounded-2xl p-8">
-        <h1 className="text-3xl font-bold text-emerald-600 mb-4 text-center">
+        <h1 className="text-3xl font-bold text-teal-500 mb-4 text-center">
           Contact Us
         </h1>
         <p className="text-gray-600 text-center mb-8">
@@ -57,7 +57,7 @@ export default function ContactPage() {
           />
           <button
             type="submit"
-            className="bg-emerald-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-emerald-700 transition"
+            className="bg-orange-500 text-white font-medium py-3 px-6 rounded-lg hover:bg-emerald-700 transition"
           >
             Send Message
           </button>

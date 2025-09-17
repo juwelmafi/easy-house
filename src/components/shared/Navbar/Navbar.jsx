@@ -62,7 +62,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             {session ? (
               <Button
-                onClick={() => signOut({ callbackUrl: "/" })} // ✅ logout handler
+                onClick={() => signOut({ callbackUrl: "/" })} className="bg-orange-500"
               >
                 Logout
               </Button>
@@ -102,7 +102,7 @@ export default function Navbar() {
                   <DropdownMenuItem asChild>
                     {session ? (
                       <Button
-                        onClick={() => signOut({ callbackUrl: "/" })} // ✅ logout handler
+                        onClick={() => signOut({ callbackUrl: "/" })} className="bg-orange-500"
                       >
                         Logout
                       </Button>

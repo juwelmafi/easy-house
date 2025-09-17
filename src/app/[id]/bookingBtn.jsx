@@ -11,12 +11,10 @@ export default function BookHouseButton({ houseId }) {
     try {
       setLoading(true);
       setMessage("");
-      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
       // You can also send logged-in user info here if using NextAuth
-      const response = await axios.post(`${baseUrl}/api/bookings`, {
-        houseId,
-      });
+      const response = await axios.post("/api/bookings", { houseId });
+
 
       if (response.status === 201) {
         setMessage("House booked successfully!");
@@ -36,11 +34,11 @@ export default function BookHouseButton({ houseId }) {
       <button
         onClick={handleBooking}
         disabled={loading}
-        className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-lg"
+        className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg"
       >
         {loading ? "Booking..." : "Book House"}
       </button>
-      {message && <p className="mt-2 text-sm text-gray-700">{message}</p>}
+      {message && <p className="mt-2 text-sm text-gray-700">Please log in first or {message}</p>}
     </div>
   );
 }

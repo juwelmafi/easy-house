@@ -37,7 +37,7 @@ export default function HouseForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-4 mt-20 max-w-4xl mx-auto p-4"
+      className="space-y-4 mt-20 max-w-4xl mx-auto p-10 bg-white"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Title */}
@@ -171,7 +171,7 @@ export default function HouseForm() {
       </div>
 
       {/* Submit */}
-      <Button type="submit" className="w-full mt-4">
+      <Button type="submit" className="w-full mt-4 bg-orange-500 text white">
         Add House
       </Button>
     </form>

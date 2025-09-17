@@ -77,7 +77,7 @@ export default function LoginForm() {
           )}
         </div>
 
-        <Button type="submit" className="w-full mt-4">
+        <Button type="submit" className="w-full mt-4 bg-orange-500 hover:bg-orange-600">
           Login
         </Button>
       </form>

@@ -5,9 +5,9 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
+    <div className="min-h-screen pt-28 bg-gray-50 flex flex-col items-center justify-center p-6">
       <div className="max-w-4xl w-full bg-white shadow-lg rounded-2xl p-8">
-        <h1 className="text-3xl font-bold text-emerald-600 mb-6 text-center">
+        <h1 className="text-3xl font-bold text-teal-400 mb-6 text-center">
           About EasyHouse
         </h1>
 

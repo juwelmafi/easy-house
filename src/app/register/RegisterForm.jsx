@@ -6,6 +6,7 @@ import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import GoogleLoginButton from "@/components/ui/SocialLogin";
 
 const registerSchema = z
   .object({
@@ -42,9 +43,10 @@ export default function RegisterForm() {
   };
 
   return (
+   <div  className="w-md mx-auto p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md space-y-4">
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-md mx-auto p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md space-y-4"
+     
     >
       <h2 className="text-2xl font-bold text-center text-gray-900 dark:text-white">
         Register
@@ -94,9 +96,11 @@ export default function RegisterForm() {
         )}
       </div>
 
-      <Button type="submit" className="w-full mt-4">
+      <Button type="submit" className="w-full mt-4 bg-orange-500 hover:bg-orange-500">
         Register
       </Button>
     </form>
+    <GoogleLoginButton/>
+   </div> 
   );
 }
