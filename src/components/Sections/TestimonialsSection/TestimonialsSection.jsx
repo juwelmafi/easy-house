@@ -32,13 +32,13 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 dark:bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 bg-blue-50 text-teal-400 rounded-full text-sm font-medium mb-4">
             TESTIMONIALS
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">What Our Clients Say About Us</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">What Our Clients Say About Us</h2>
           <div className="mt-2 h-1 w-16 bg-teal-400 mx-auto"></div>
         </div>
 
@@ -60,9 +60,9 @@ const TestimonialsSection = () => {
           >
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
-                <div className="bg-white rounded-xl p-8 shadow-md text-center mx-auto max-w-2xl">
+                <div className="bg-white dark:bg-[#171717] rounded-xl p-8 shadow-md text-center mx-auto max-w-2xl">
                   <div className="text-teal-400 text-4xl mb-2">"</div>
-                  <p className="text-gray-600 text-lg mb-6 px-4">
+                  <p className=" text-lg mb-6 px-4">
                     {testimonial.content}
                   </p>
                   <div className="flex items-center justify-center">
@@ -75,8 +75,8 @@ const TestimonialsSection = () => {
                       />
                     </div>
                     <div className="text-left">
-                      <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                      <p className="text-gray-500 text-sm">{testimonial.location}</p>
+                      <h4 className="font-semibold ">{testimonial.name}</h4>
+                      <p className=" text-sm">{testimonial.location}</p>
                     </div>
                   </div>
                 </div>

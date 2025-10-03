@@ -27,10 +27,10 @@ export default function PartnersSection() {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4">
         {/* Title */}
-        <h2 className="text-3xl font-bold text-center text-gray-900">
+        <h2 className="text-3xl font-bold text-center">
           Our Real Estate Partners
         </h2>
         <div className="mt-2 mb-10 h-1 w-16 bg-teal-400 mx-auto"></div>
