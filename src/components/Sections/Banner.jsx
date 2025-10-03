@@ -79,11 +79,11 @@ export default function BannerCarousel() {
                     {house.discount}
                   </Badge>
                   <h2 className="md:text-xl font-bold">{house.title}</h2>
-                  <p className="text-sm text-gray-600">{house.address}</p>
+                  <p className="text-sm ">{house.address}</p>
                   <p className="text-2xl font-semibold text-teal-400">
                     {house.price}
                   </p>
-                  <div className="hidden md:flex  justify-between text-gray-700 text-sm pt-3">
+                  <div className="hidden md:flex  justify-between  text-sm pt-3">
                     <div className="flex items-center gap-1">
                       <FaBed className="text-teal-400"/> {house.beds} Br
                     </div>

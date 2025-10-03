@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useSession, signOut } from "next-auth/react"; // ✅ import signOut
 import { usePathname } from "next/navigation";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Navbar() {
   const { data: session, status } = useSession();
@@ -61,11 +62,15 @@ export default function Navbar() {
           {/* Right Side */}
           <div className="flex items-center gap-2">
             {session ? (
-              <Button
+              <div>
+                <Button
                 onClick={() => signOut({ callbackUrl: "/" })} className="bg-orange-500"
               >
                 Logout
               </Button>
+              <ThemeToggle/>
+              </div>
+
             ) : (
               <div className="space-x-2 hidden md:block">
                 <Button variant="outline" asChild>
@@ -74,6 +79,7 @@ export default function Navbar() {
                 <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white">
                   <Link href="/register">Sign Up</Link>
                 </Button>
+                <ThemeToggle/>
               </div>
             )}
 
@@ -101,11 +107,15 @@ export default function Navbar() {
                   )}
                   <DropdownMenuItem asChild>
                     {session ? (
+                     <div>
                       <Button
                         onClick={() => signOut({ callbackUrl: "/" })} className="bg-orange-500"
                       >
                         Logout
                       </Button>
+                      <ThemeToggle/>
+                     </div> 
+                      
                     ) : (
                       <div className="space-x-2 md:hidden">
                         <Button variant="outline" asChild>
@@ -114,6 +124,7 @@ export default function Navbar() {
                         <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white">
                           <Link href="/register">Sign Up</Link>
                         </Button>
+                        <ThemeToggle/>
                       </div>
                     )}
                   </DropdownMenuItem>

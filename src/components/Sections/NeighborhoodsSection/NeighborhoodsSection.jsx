@@ -44,7 +44,7 @@ const NeighborhoodsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 dark:bg-black">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Left Content */}
@@ -52,11 +52,11 @@ const NeighborhoodsSection = () => {
             <span className="inline-block px-4 py-1.5 bg-teal-50 text-teal-400 rounded-full text-sm font-medium mb-4">
               Explore
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold ">
               Neighborhoods
             </h2>
           <div className=" my-2 h-1 w-16 bg-teal-400"></div>
-            <p className="text-gray-600 mb-6">
+            <p className=" mb-6">
               Lorem ipsum dolor sit amet, consectetur icing elit. Suspendisse
               suscipit
             </p>
@@ -113,8 +113,8 @@ const NeighborhoodsSection = () => {
                         </span>
                       </div>
                     </div>
-                    <div className="p-5 bg-white">
-                      <h3 className="text-xl font-bold text-gray-900">
+                    <div className="p-5 bg-white dark:bg-[#171717] dark:border">
+                      <h3 className="text-xl font-bold ">
                         {neighborhood.name}
                       </h3>
                     </div>
@@ -124,7 +124,7 @@ const NeighborhoodsSection = () => {
 
               {/* Custom Navigation */}
               <div className="flex gap-2 mt-6 justify-end">
-                <button className="swiper-button-prev flex items-center justify-center w-10 h-10 rounded-full bg-white border border-gray-300 text-gray-700 shadow-md hover:bg-gray-50 transition-colors">
+                <button className="swiper-button-prev flex items-center justify-center w-10 h-10 rounded-full bg-white border border-gray-300  shadow-md hover:bg-gray-50 transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -140,7 +140,7 @@ const NeighborhoodsSection = () => {
                     />
                   </svg>
                 </button>
-                <button className="swiper-button-next flex items-center justify-center w-10 h-10 rounded-full bg-white border border-gray-300 text-gray-700 shadow-md hover:bg-gray-50 transition-colors">
+                <button className="swiper-button-next flex items-center justify-center w-10 h-10 rounded-full bg-white border border-gray-300  shadow-md hover:bg-gray-50 transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"

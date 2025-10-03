@@ -18,11 +18,11 @@ export default async function LatestProperties() {
   }));
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-12 bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-3xl font-bold">
             Latest Properties For Sale
           </h2>
           <div className="mt-2 h-1 w-16 bg-teal-400 mx-auto"></div>

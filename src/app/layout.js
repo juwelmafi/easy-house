@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/shared/Navbar/Navbar";
 import { Footer } from "@/components/shared/Footer/Footer";
 import NextAuthProviders from "@/providers/NextAuthProvider";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,18 +23,19 @@ export const metadata = {
   description: "Find, buy, and rent properties easily with EasyHouse.",
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <NextAuthProviders>
-          <header>
-            <Navbar />
-          </header>
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-        </NextAuthProviders>
+        <ThemeProvider>
+          <NextAuthProviders>
+            <header>
+              <Navbar />
+            </header>
+            <main className="min-h-screen">{children}</main>
+            <Footer />
+          </NextAuthProviders>
+        </ThemeProvider>
       </body>
     </html>
   );

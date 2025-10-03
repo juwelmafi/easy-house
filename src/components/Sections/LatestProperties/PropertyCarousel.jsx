@@ -27,7 +27,7 @@ export default function PropertyCarousel({ properties }) {
       {properties.map((property) => (
         <SwiperSlide key={property.id}>
          <Link href={`/${property._id}`}>
-           <div className="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+           <div className="rounded-lg bg-white dark:bg-[#171717] dark:border shadow hover:shadow-lg transition overflow-hidden">
             {/* Image */}
             <div className="relative">
               <img
@@ -49,7 +49,7 @@ export default function PropertyCarousel({ properties }) {
             {/* Content */}
             <div className="p-4">
               <div className="flex items-center justify-between">
-                <p className="text-lg font-bold text-gray-900">
+                <p className="text-lg font-bold ">
                   {property.price}
                 </p>
                 <span className="bg-teal-400 text-white text-xs font-bold px-3 py-1 rounded">
@@ -57,13 +57,13 @@ export default function PropertyCarousel({ properties }) {
                 </span>
               </div>
 
-              <h3 className="mt-2 text-gray-900 font-semibold">
+              <h3 className="mt-2  font-semibold">
                 {property.title}
               </h3>
-              <p className="text-sm text-gray-500">{property.address}</p>
+              <p className="text-sm ">{property.address}</p>
 
               {/* Icons */}
-              <div className="flex items-center gap-5 mt-4 text-sm text-gray-600">
+              <div className="flex items-center gap-5 mt-4 text-sm ">
                 <span className="flex items-center gap-1">
                   <FaBed className="text-teal-400" /> {property.beds} Br
                 </span>
