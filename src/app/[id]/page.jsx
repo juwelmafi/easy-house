@@ -30,7 +30,7 @@ export default async function HouseDetailPage({ params }) {
         />
         <div>
           <h1 className="text-3xl font-bold mb-4">{house.title}</h1>
-          <div className="bg-orange-50 border border-orange-500 p-10 rounded-2xl">
+          <div className="bg-orange-50  border border-orange-500 p-10 rounded-2xl">
             <p className="text-xl text-teal-400 mb-4 font-bold">${house.price}</p>
           <p className="text-gray-700"><span className="font-bold">House Address </span>: {house.address}</p>
           <p className="text-gray-700"><span className="font-bold">Total beds in the house:</span> {house.beds}</p>

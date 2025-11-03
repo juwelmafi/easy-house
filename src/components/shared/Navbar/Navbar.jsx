@@ -72,7 +72,7 @@ export default function Navbar() {
               </div>
 
             ) : (
-              <div className="space-x-2 hidden md:block">
+              <div className="space-x-2 hidden md:flex justify-center items-center">
                 <Button variant="outline" asChild>
                   <Link href="/login">Login</Link>
                 </Button>
