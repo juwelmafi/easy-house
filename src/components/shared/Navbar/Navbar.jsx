@@ -60,9 +60,9 @@ export default function Navbar() {
           </NavigationMenu>
 
           {/* Right Side */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center">
             {session ? (
-              <div>
+              <div className="flex justify-center items-center gap-2">
                 <Button
                 onClick={() => signOut({ callbackUrl: "/" })} className="bg-orange-500"
               >
@@ -117,7 +117,7 @@ export default function Navbar() {
                      </div> 
                       
                     ) : (
-                      <div className="space-x-2 md:hidden">
+                      <div className="space-x-2 md:hidden flex justify-center items-center">
                         <Button variant="outline" asChild>
                           <Link href="/login">Login</Link>
                         </Button>
