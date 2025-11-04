@@ -8,10 +8,10 @@ const DashboardLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen bg-gray-100 dark:bg-black">
       {/* Sidebar */}
       <div
-        className={`fixed inset-y-0 left-0 bg-white shadow-lg z-30 transform ${
+        className={`fixed dark:border-r border-gray-600 inset-y-0 left-0 bg-white dark:bg-black shadow-lg z-30 transform ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 transition-transform duration-300 w-64`}
       >
@@ -23,19 +23,19 @@ const DashboardLayout = ({ children }) => {
         <nav className="mt-6">
           <Link
             href="/dashboard"
-            className="flex items-center px-6 py-3 text-gray-700 hover:bg-emerald-100 rounded"
+            className="flex items-center px-6 py-3 text-gray-700 dark:text-gray-100 hover:bg-emerald-100 dark:hover:bg-[#171717] rounded"
           >
             <FiHome className="mr-3" /> Dashboard
           </Link>
           <Link
             href="/dashboard/add-house"
-            className="flex items-center px-6 py-3 text-gray-700 hover:bg-emerald-100 rounded"
+            className="flex items-center px-6 py-3 text-gray-700 dark:text-gray-100 hover:bg-emerald-100 dark:hover:bg-[#171717] rounded"
           >
             <FiUser className="mr-3" /> Add House
           </Link>
           <Link
             href="/dashboard/manage-house"
-            className="flex items-center px-6 py-3 text-gray-700 hover:bg-emerald-100 rounded"
+            className="flex items-center px-6 py-3 text-gray-700 dark:text-gray-100 hover:bg-emerald-100 dark:hover:bg-[#171717] rounded"
           >
             <FiSettings className="mr-3" /> Manage House
           </Link>
@@ -53,15 +53,15 @@ const DashboardLayout = ({ children }) => {
       {/* Main content */}
       <div className="flex-1 flex flex-col overflow-hidden md:ml-64">
         {/* Navbar */}
-        <header className="flex items-center justify-between bg-white shadow px-4 py-3 md:px-6">
+        <header className="flex items-center dark:border-b border-gray-600 justify-between bg-white dark:bg-black shadow px-4 py-3 md:px-6">
           <div className="flex items-center">
             <button
-              className="text-gray-700 md:hidden mr-3 focus:outline-none"
+              className="text-gray-700 dark:text-gray-100 md:hidden mr-3 focus:outline-none"
               onClick={() => setSidebarOpen(!sidebarOpen)}
             >
               <FiMenu size={24} />
             </button>
-            <h2 className="text-xl font-semibold text-gray-700">Dashboard</h2>
+            <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-100">Dashboard</h2>
           </div>
           <div className="flex items-center space-x-4">
             <input

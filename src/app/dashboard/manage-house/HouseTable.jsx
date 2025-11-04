@@ -63,35 +63,35 @@ const HouseTable = ({ houses }) => {
     <div className="overflow-x-auto">
       <table className="min-w-full border border-gray-300">
         <thead>
-          <tr className="bg-white">
+          <tr className="dark:bg-[#171717]">
             <th className="px-4 py-2 border">Title</th>
             <th className="px-4 py-2 border">Price</th>
             <th className="px-4 py-2 border">Country</th>
             <th className="px-4 py-2 border">Actions</th>
           </tr>
         </thead>
-        <tbody className="bg-white">
+        <tbody className="bg-white dark:bg-[#171717]">
           {houseList.map((house, index) => (
-            <tr key={index} className="hover:bg-gray-50">
+            <tr key={index} className="hover:bg-gray-50 dark:hover:bg-black">
               <td className="px-4 py-2 border line-clamp-2">{house.title}</td>
               <td className="px-4 py-2 border">{house.price}</td>
               <td className="px-4 py-2 border">{house.country}</td>
               <td className="px-4 py-2 border flex justify-center items-center space-x-2">
                 <button
                   onClick={() => setSelectedHouse(house)}
-                  className="bg-blue-50 border border-blue-500 px-3 py-1 rounded hover:bg-blue-100"
+                  className="bg-blue-50 dark:bg-black border border-blue-500 px-3 py-1 rounded hover:bg-blue-100"
                 >
                   View
                 </button>
                 <button
                   onClick={() => setEditHouse(house)}
-                  className="bg-yellow-50 border border-yellow-500 px-3 py-1 rounded hover:bg-yellow-100"
+                  className="bg-yellow-50 dark:bg-black border border-yellow-500 px-3 py-1 rounded hover:bg-yellow-100"
                 >
                   Edit
                 </button>
                 <button
                   onClick={() => handleDelete(house._id)}
-                  className="bg-red-50 border border-red-500 px-3 py-1 rounded hover:bg-red-100"
+                  className="bg-red-50 dark:bg-black border border-red-500 px-3 py-1 rounded hover:bg-red-100"
                 >
                   Delete
                 </button>

@@ -37,7 +37,7 @@ export default function HouseForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-4 mt-20 max-w-4xl mx-auto p-10 bg-white"
+      className="space-y-4 mt-20 max-w-4xl mx-auto p-10 bg-white dark:bg-black"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Title */}

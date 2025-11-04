@@ -4,7 +4,7 @@ export default function MyBookingsTable({ bookings }) {
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full border border-gray-200 rounded-lg shadow-sm">
-        <thead className="bg-white text-gray-700">
+        <thead className="bg-white dark:bg-[#171717] text-gray-700 dark:text-white">
           <tr>
             <th className="px-4 py-2 border">#</th>
             <th className="px-4 py-2 border">House Title</th>
@@ -13,12 +13,12 @@ export default function MyBookingsTable({ bookings }) {
             <th className="px-4 py-2 border">Booked At</th>
           </tr>
         </thead>
-        <tbody className="bg-white">
+        <tbody className="bg-white dark:bg-[#171717]">
           {bookings.length > 0 ? (
             bookings.map((b, idx) => (
               <tr
                 key={b._id}
-                className="text-center hover:bg-gray-50 transition"
+                className="text-center hover:bg-gray-50 dark:hover:bg-black transition"
               >
                 <td className="px-4 py-2 border">{idx + 1}</td>
                 <td className="px-4 py-2 border font-medium">
